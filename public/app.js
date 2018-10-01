@@ -22,13 +22,13 @@ $(document).on("click", "p", function () {
   })
     .then(function (data) {
       console.log(data);
-      $("#notes").append("<h2>" + data.title + "</h2>");
+      $("#notes").append("<h2>" + data.rating + "</h2>");
       $("#notes").append("<input id='ratinginput' name='rating' placeholder='your rating'>");
       $("#notes").append("<textarea id='bodyinput' name='body' placeholder='your review'></textarea>");
       $("#notes").append("<a data-id='" + data._id + "' id='savenote'>Save Note</a>");
 
       if (data.note) {
-        $("#ratinginput").val(data.note.title);
+        $("#ratinginput").val(data.note.rating);
         $("#bodyinput").val(data.note.body);
       }
     });
