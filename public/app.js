@@ -41,7 +41,7 @@ $(document).on("click", "#savenote", function () {
     method: "POST",
     url: "/games/" + thisId,
     data: {
-      title: $("#ratinginput").val(),
+      rating: $("#ratinginput").val(),
       body: $("#bodyinput").val()
     }
   })
